@@ -4,7 +4,7 @@ Solving Air Cargo Problem 1 using recursive_best_first_search with h_1...
 Expansions   Goal Tests   New Nodes
    4229        4230       17029   
 
-Plan length: 6  Time elapsed in seconds: 2.635881160997087
+Plan length: 6  Time elapsed in seconds: 2.808235001999492
 Load(C1, P1, SFO)
 Load(C2, P2, JFK)
 Fly(P2, JFK, SFO)

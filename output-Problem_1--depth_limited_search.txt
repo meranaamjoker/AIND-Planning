@@ -4,7 +4,7 @@ Solving Air Cargo Problem 1 using depth_limited_search...
 Expansions   Goal Tests   New Nodes
    101         271         414    
 
-Plan length: 50  Time elapsed in seconds: 0.08729508500255179
+Plan length: 50  Time elapsed in seconds: 0.09680817100070271
 Load(C2, P2, JFK)
 Load(C1, P1, SFO)
 Unload(C2, P2, JFK)

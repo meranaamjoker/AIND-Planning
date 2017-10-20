@@ -4,7 +4,7 @@ Solving Air Cargo Problem 1 using greedy_best_first_graph_search with h_1...
 Expansions   Goal Tests   New Nodes
     7           9           28    
 
-Plan length: 6  Time elapsed in seconds: 0.005250059999525547
+Plan length: 6  Time elapsed in seconds: 0.00507851899965317
 Load(C1, P1, SFO)
 Load(C2, P2, JFK)
 Fly(P1, SFO, JFK)

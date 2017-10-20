@@ -4,7 +4,7 @@ Solving Air Cargo Problem 3 using astar_search with h_ignore_preconditions...
 Expansions   Goal Tests   New Nodes
    5040        5042       44944   
 
-Plan length: 12  Time elapsed in seconds: 14.337123682998936
+Plan length: 12  Time elapsed in seconds: 15.259066114000234
 Load(C2, P2, JFK)
 Fly(P2, JFK, ORD)
 Load(C4, P2, ORD)
