@@ -87,7 +87,7 @@ class AirCargoProblem(Problem):
                         precond_positive = [expr("In({}, {})".format(cargo, plane)),
                                             expr("At({}, {})".format(plane, airport))]
                         precond_negative = [expr("At({}, {})".format(cargo, airport))]
-                        precond_negative = []
+                        # precond_negative = []
                         effect_add = [expr("At({}, {})".format(cargo, airport))]
                         effect_remove = [expr("In({}, {})".format(cargo, plane))]
                         unload = Action(expr("Unload({}, {}, {})".format(cargo, plane, airport)),
@@ -274,9 +274,9 @@ def air_cargo_p2() -> AirCargoProblem:
     neg = [expr("At(C1, JFK)"), expr("At(C1, ATL)"),
            expr("At(C2, SFO)"), expr("At(C2, ATL)"),
            expr("At(C3, SFO)"), expr("At(C3, JFK)"),
-           expr("At(C1, P1)"), expr("At(C1, P2)"), expr("At(C1, P3)"),
-           expr("At(C2, P1)"), expr("At(C2, P2)"), expr("At(C2, P3)"),
-           expr("At(C3, P1)"), expr("At(C3, P2)"), expr("At(C3, P3)"),
+           expr("In(C1, P1)"), expr("In(C1, P2)"), expr("In(C1, P3)"),
+           expr("In(C2, P1)"), expr("In(C2, P2)"), expr("In(C2, P3)"),
+           expr("In(C3, P1)"), expr("In(C3, P2)"), expr("In(C3, P3)"),
            expr("At(P1, JFK)"), expr("At(P1, ATL)"),
            expr("At(P2, SFO)"), expr("At(P2, ATL)"),
            expr("At(P3, SFO)"), expr("At(P3, JFK)")
@@ -325,3 +325,21 @@ def air_cargo_p3() -> AirCargoProblem:
             expr('At(C4, SFO)'),
             ]
     return AirCargoProblem(cargos, planes, airports, init, goal)
+
+
+if __name__ == '__main__':
+    problems = [air_cargo_p1(), air_cargo_p2(), air_cargo_p3()]
+    for p in problems:
+        # Lifted from example_have_cake.py
+        print("**** PROBLEM SETUP ****")
+        print("Initial state for this problem is {}".format(p.initial))
+        print("Actions for this domain are:")
+        for a in p.actions_list:
+            print('   {}{}'.format(a.name, a.args))
+        print("Fluents in this problem are:")
+        for f in p.state_map:
+            print('   {}'.format(f))
+        print("Goal requirement for this problem are:")
+        for g in p.goal:
+            print('   {}'.format(g))
+        print()
